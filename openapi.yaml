@@ -1,0 +1,37 @@
+openapi: 3.1.0
+info:
+  title: Seed System API
+  version: "1.0"
+paths:
+  /seed_handle:
+    post:
+      operationId: seed_handle
+      summary: Route user message through Seed System
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SeedReq'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SeedResp'
+components:
+  schemas:
+    SeedReq:
+      type: object
+      properties:
+        session_id:
+          type: string
+        user_msg:
+          type: string
+      required: [session_id, user_msg]
+    SeedResp:
+      type: object
+      properties:
+        assistant_msg:
+          type: string

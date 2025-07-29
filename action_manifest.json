@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Seed System",
+  "name_for_model": "seed_system",
+  "description_for_human": "Turn avoidance phrases into reflective questions with carbon accountability.",
+  "description_for_model": "When user input looks like avoidance or starts with /seed, call function seed_handle.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://YOUR-DOMAIN.com/openapi.yaml"
+  },
+  "logo_url": "https://YOUR-DOMAIN.com/logo.png",
+  "contact_email": "you@example.com",
+  "legal_info_url": "https://YOUR-DOMAIN.com/legal"
+}
